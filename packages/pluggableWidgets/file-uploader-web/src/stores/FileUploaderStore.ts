@@ -143,6 +143,8 @@ export class FileUploaderStore {
     }
 
     processDrop(acceptedFiles: File[], fileRejections: FileRejection[]): void {
+        this.files = this.files.filter(f => f.fileStatus !== "validationError");
+
         if (!this.objectCreationHelper.canCreateFiles) {
             console.error(
                 `'Action to create new files/images' is not available or can't be executed. Please check if '${this._widgetName}' widget is configured correctly.`
