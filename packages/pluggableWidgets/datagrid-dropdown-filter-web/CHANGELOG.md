@@ -6,6 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- We fixed an issue with filter selector dropdown not choosing the best placement on small viewports.
+
+## [3.9.0] - 2026-03-23
+
+### Fixed
+
+- We fixed an issue with Dropdown filter captions not updating properly when their template parameters change.
+
+## [3.8.1] - 2026-02-19
+
+### Changed
+
+- We improved the dropdown and filter selector behavior so that it now automatically selects the best placement based on the available space.
+
+### Fixed
+
+- We fixed an issue where certain selecting conditions, like rapidly selecting/deselecting would cause the widget to crash.
+
 ## [3.6.0] - 2025-10-01
 
 ### Changed

@@ -127,6 +127,7 @@ export interface DatagridContainerProps {
     dynamicPageSize?: EditableValue<Big>;
     dynamicPage?: EditableValue<Big>;
     totalCountValue?: EditableValue<Big>;
+    dynamicItemCount?: EditableValue<Big>;
     showEmptyPlaceholder: ShowEmptyPlaceholderEnum;
     emptyPlaceholder?: ReactNode;
     rowClass?: ListExpressionValue<string>;
@@ -142,6 +143,7 @@ export interface DatagridContainerProps {
     cancelExportLabel?: DynamicValue<string>;
     selectRowLabel?: DynamicValue<string>;
     selectAllRowsLabel?: DynamicValue<string>;
+    singleSelectionColumnLabel?: DynamicValue<string>;
     selectingAllLabel?: DynamicValue<string>;
     cancelSelectionLabel?: DynamicValue<string>;
     selectedCountTemplateSingular?: DynamicValue<string>;
@@ -192,6 +194,7 @@ export interface DatagridPreviewProps {
     dynamicPageSize: string;
     dynamicPage: string;
     totalCountValue: string;
+    dynamicItemCount: string;
     showEmptyPlaceholder: ShowEmptyPlaceholderEnum;
     emptyPlaceholder: { widgetCount: number; renderer: ComponentType<{ children: ReactNode; caption?: string }> };
     rowClass: string;
@@ -208,6 +211,7 @@ export interface DatagridPreviewProps {
     cancelExportLabel: string;
     selectRowLabel: string;
     selectAllRowsLabel: string;
+    singleSelectionColumnLabel: string;
     selectingAllLabel: string;
     cancelSelectionLabel: string;
     selectedCountTemplateSingular: string;

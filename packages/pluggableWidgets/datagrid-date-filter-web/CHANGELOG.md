@@ -8,6 +8,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
+- We fixed an issue with filter selector dropdown not choosing the best placement on small viewports.
+
+## [3.8.1] - 2026-02-19
+
+### Changed
+
+- We improved the filter selector dropdown behavior so it now automatically selects the best placement based on the available space.
+
+## [3.8.0] - 2026-01-16
+
+### Fixed
+
 - We fixed an issue with background-color styles on hover in date picker.
 
 ## [3.6.0] - 2025-10-01

@@ -62,13 +62,6 @@
                         <attributeType name="String" />
                     </attributeTypes>
                 </property>
-                <property key="startDateAttribute" type="attribute" dataSource="databaseDataSource" required="false">
-                    <caption>Start date attribute</caption>
-                    <description>The start date that should be shown in the view</description>
-                    <attributeTypes>
-                        <attributeType name="DateTime" />
-                    </attributeTypes>
-                </property>
             </propertyGroup>
         </propertyGroup>
         <propertyGroup caption="View">
@@ -130,6 +123,21 @@
                 <property key="showAllEvents" type="boolean" defaultValue="true">
                     <caption>Show all events</caption>
                     <description>Auto-adjust calendar height to display all events without "more" links</description>
+                </property>
+                <property key="step" type="integer" defaultValue="30">
+                    <caption>Step</caption>
+                    <description>Determines the selectable time increments in week and day views</description>
+                </property>
+                <property key="timeslots" type="integer" defaultValue="1">
+                    <caption>Time slots</caption>
+                    <description>The number of slots per "section" in the time grid views. Adjust with step to change the default of 1 hour long groups, with 30 minute slots</description>
+                </property>
+                <property key="startDateAttribute" type="attribute" required="false">
+                    <caption>Start date attribute</caption>
+                    <description>The DateTime attribute used on initial load</description>
+                    <attributeTypes>
+                        <attributeType name="DateTime" />
+                    </attributeTypes>
                 </property>
             </propertyGroup>
         </propertyGroup>

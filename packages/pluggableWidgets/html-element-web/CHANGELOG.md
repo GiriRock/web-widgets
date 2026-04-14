@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.2.6] - 2026-03-31
+
+### Security
+
+- Updated dompurify library to version 3.3.3 to incorporate latest improvements and security fixes.
+
+## [1.2.5] - 2026-02-10
+
+### Added
+
+- We added a license file and a readme documenting all open source dependencies used in this package.
+
 ## [1.2.4] - 2025-12-08
 
 ### Fixed

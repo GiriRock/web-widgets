@@ -6,6 +6,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [4.11.2] - 2026-03-05
+
+### Fixed
+
+- We fixed an issue where hyperlink tag does not read target attribute when edited from code viewer.
+
+## [4.11.1] - 2026-01-27
+
+### Fixed
+
+- We fixed an issue where `<br />` tag not added properly on end of line.
+
+- We fixed an issue where tab `\t` being removed on save.
+
+- We fixed an issue where link tooltip get clipped by the boundaries of rich text.
+
 ## [4.11.0] - 2025-11-06
 
 ### Fixed

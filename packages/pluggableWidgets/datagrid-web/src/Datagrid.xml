@@ -342,6 +342,13 @@
                         <attributeType name="Integer" />
                     </attributeTypes>
                 </property>
+                <property key="dynamicItemCount" type="attribute" required="false">
+                    <caption>Loaded rows</caption>
+                    <description>Read-only attribute reflecting the number of rows currently loaded.</description>
+                    <attributeTypes>
+                        <attributeType name="Integer" />
+                    </attributeTypes>
+                </property>
             </propertyGroup>
             <propertyGroup caption="Appearance">
                 <property key="showEmptyPlaceholder" type="enumeration" defaultValue="none">
@@ -444,6 +451,14 @@
                     <translations>
                         <translation lang="en_US">Select all rows</translation>
                         <translation lang="nl_NL">Selecteer alle rijen</translation>
+                    </translations>
+                </property>
+                <property key="singleSelectionColumnLabel" type="textTemplate" required="false">
+                    <caption>Single selection column label</caption>
+                    <description>If single selection is enabled, assistive technology will read this for the selection column header.</description>
+                    <translations>
+                        <translation lang="en_US">Select single row</translation>
+                        <translation lang="nl_NL">Selecteer enkele rij</translation>
                     </translations>
                 </property>
                 <property key="selectingAllLabel" type="textTemplate" required="false">

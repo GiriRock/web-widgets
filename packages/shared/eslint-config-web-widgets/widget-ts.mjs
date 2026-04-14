@@ -6,11 +6,22 @@ import reactHooksPlugin from "eslint-plugin-react-hooks";
 import jestPlugin from "eslint-plugin-jest";
 import packageJson from "eslint-plugin-package-json";
 import packageJsonFieldsOrder from "@mendix/prettier-config-web-widgets/package-json-fields-order.js";
+import { defineConfig } from "eslint/config";
+import importPlugin from "eslint-plugin-import";
 
-export default tseslint.config(
+export default defineConfig(
     {
         name: "generic eslint",
-        extends: [eslint.configs.recommended],
+        extends: [eslint.configs.recommended, importPlugin.flatConfigs.recommended],
+        settings: {
+            "import/internal-regex": "^@mendix/",
+            "import/parsers": {
+                "@typescript-eslint/parser": [".ts", ".tsx"]
+            }
+        },
+        languageOptions: {
+            ecmaVersion: "latest"
+        },
         rules: {
             "no-undef": "warn",
             "no-unused-vars": "warn",
@@ -62,11 +73,24 @@ export default tseslint.config(
             "prefer-spread": "error",
             radix: "error",
             "spaced-comment": "error",
-            "sort-imports": [
-                "error",
+            "sort-imports": "off",
+            "import/no-unresolved": "off",
+            "import/namespace": "off",
+            "import/named": "off",
+            "import/order": [
+                "warn",
                 {
-                    ignoreDeclarationSort: true,
-                    ignoreCase: true
+                    alphabetize: {
+                        order: "asc",
+                        caseInsensitive: true
+                    },
+                    groups: [
+                        // Imports of builtins are first
+                        "builtin",
+                        "external",
+                        // Then index file imports
+                        "internal"
+                    ]
                 }
             ]
         }
@@ -111,11 +135,16 @@ export default tseslint.config(
     },
     {
         name: "react hooks",
-        extends: [reactHooksPlugin.configs["recommended-latest"]],
+        extends: [reactHooksPlugin.configs.flat["recommended"]],
         files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
         rules: {
             "react-hooks/rules-of-hooks": "error",
-            "react-hooks/exhaustive-deps": "warn"
+            "react-hooks/exhaustive-deps": "warn",
+            "react-hooks/refs": "off",
+            "react-hooks/immutability": "off",
+            "react-hooks/preserve-manual-memoization": "off",
+            "react-hooks/set-state-in-effect": "warn",
+            "react-hooks/use-memo": "warn"
         }
     },
     {
@@ -222,6 +251,11 @@ export default tseslint.config(
             "package-json/no-empty-fields": "off",
             "package-json/require-type": "off",
             "package-json/valid-exports": "off",
+            "package-json/require-exports": "off",
+            "package-json/require-files": "off",
+            "package-json/require-sideEffects": "off",
+            "package-json/require-attribution": "off",
+            "package-json/specify-peers-locally": "off",
             "package-json/order-properties": [
                 "error",
                 {

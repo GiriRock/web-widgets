@@ -6,14 +6,36 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [3.9.0] - 2026-03-23
+
+### Fixed
+
+- We fixed the pagination properties `Page attribute`, `Page size attribute`, and `Total count` not being shown in Studio Pro for Virtual Scrolling and Load More pagination modes.
+
+### Changed
+
+- We changed the structure of the gallery settings to align them with the data grid.
+
+### Added
+
+- We added the `Loaded rows` attribute to reflect the number of rows currently loaded. Available for Virtual Scrolling and Load More pagination modes.
+
+- We added new attributes and a drop zone for custom pagination.
+
+- We added support for the auto-select feature in multi-selection and single-selection mode.
+
+## [3.8.0] - 2026-01-16
+
 ### Fixed
 
 - We fixed an issue where the footer would take up unnecessary spacing when no content was rendered inside.
+
 - We fixed an issue where the row count wasn't displayed when "Virtual scroll" is on.
 
 ### Added
 
 - We added missing dutch translations for Gallery.
+
 - We added a refresh interval property, to allow defining an interval (in seconds) for refreshing the content in Gallery
 
 ## [3.7.0] - 2025-11-11
