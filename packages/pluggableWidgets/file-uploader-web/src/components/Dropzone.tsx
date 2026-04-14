@@ -5,6 +5,7 @@ import { FileRejection, useDropzone } from "react-dropzone";
 import { MimeCheckFormat } from "../utils/parseAllowedFormats";
 import { TranslationsStore } from "../stores/TranslationsStore";
 import { useTranslationsStore } from "../utils/useTranslationsStore";
+import { fileSize } from "../utils/fileSize";
 
 interface DropzoneProps {
     warningMessage?: string;
@@ -35,6 +36,14 @@ export const Dropzone = observer(
         const translations = useTranslationsStore();
         const [type, msg] = getMessage(translations, isDragAccept, isDragReject);
 
+        const fileExtensions = Object.values(acceptFileTypes)
+            .flat()
+            .map(ext => ext.replace(".", "").toUpperCase())
+            .join(", ");
+
+        const maxSizeLabel = maxSize > 0 ? `( Max. File Size : ${fileSize(maxSize)} )` : null;
+        const subtitle = [fileExtensions, maxSizeLabel].filter(Boolean).join(" ");
+
         return (
             <Fragment>
                 <div
@@ -45,9 +54,23 @@ export const Dropzone = observer(
                     })}
                     {...getRootProps()}
                 >
-                    <div className={"file-icon"} />
-                    {!disabled && <p className={"upload-text"}>{msg}</p>}
-
+                    <div className={"upload-circle-icon"}>
+                        <span>+</span>
+                    </div>
+                    <div className={"upload-text-container"} dir="auto">
+                        {!disabled && (
+                            <p className={"upload-text"}>
+                                <span>{msg}</span>
+                                {type === "idle" && (
+                                    <span className={"upload-browse"}>
+                                        {" "}
+                                        {translations.get("dropzoneBrowseMessage")}
+                                    </span>
+                                )}
+                            </p>
+                        )}
+                        {subtitle && <p className={"upload-subtitle"}>{subtitle}</p>}
+                    </div>
                     {!disabled && <input {...getInputProps()} />}
                 </div>
                 {warningMessage && <div className={classNames("dropzone-message")}>{warningMessage}</div>}

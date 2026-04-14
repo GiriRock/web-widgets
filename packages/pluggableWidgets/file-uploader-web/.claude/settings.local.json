@@ -1,0 +1,11 @@
+{
+    "permissions": {
+        "allow": [
+            "Bash(test:*)",
+            "Bash(pnpm run build)",
+            "Bash(ls:*)",
+            "Bash(echo:*)",
+            "WebFetch(domain:docs.mendix.com)"
+        ]
+    }
+}

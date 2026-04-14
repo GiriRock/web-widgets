@@ -9,8 +9,6 @@ import { useRootStore } from "../utils/useRootStore";
 import { FileEntryContainer } from "./FileEntry";
 import { Dropzone } from "./Dropzone";
 
-import "../ui/FileUploader.scss";
-
 export const FileUploaderRoot = observer((props: FileUploaderContainerProps): ReactElement => {
     const rootStore = useRootStore(props);
 

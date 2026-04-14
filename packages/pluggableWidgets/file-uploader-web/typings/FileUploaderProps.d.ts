@@ -62,6 +62,7 @@ export interface FileUploaderContainerProps {
     maxFilesPerUpload: DynamicValue<Big>;
     maxFileSize: number;
     dropzoneIdleMessage: DynamicValue<string>;
+    dropzoneBrowseMessage: DynamicValue<string>;
     dropzoneAcceptedMessage: DynamicValue<string>;
     dropzoneRejectedMessage: DynamicValue<string>;
     uploadInProgressMessage: DynamicValue<string>;
@@ -105,6 +106,7 @@ export interface FileUploaderPreviewProps {
     maxFilesPerUpload: string;
     maxFileSize: number | null;
     dropzoneIdleMessage: string;
+    dropzoneBrowseMessage: string;
     dropzoneAcceptedMessage: string;
     dropzoneRejectedMessage: string;
     uploadInProgressMessage: string;

@@ -95,8 +95,18 @@
                 <caption>Dropzone message</caption>
                 <description />
                 <translations>
-                    <translation lang="en_US">Drag and drop files here</translation>
-                    <translation lang="nl_NL">Sleep hier bestanden naartoe</translation>
+                    <translation lang="en_US">Drop your file here or</translation>
+                    <translation lang="nl_NL">Sleep hier bestanden naartoe of</translation>
+                    <translation lang="ar_AE">أفلت ملفك هنا أو</translation>
+                </translations>
+            </property>
+            <property key="dropzoneBrowseMessage" type="textTemplate">
+                <caption>Dropzone browse text</caption>
+                <description>Text for the clickable browse link in the dropzone.</description>
+                <translations>
+                    <translation lang="en_US">Browse</translation>
+                    <translation lang="nl_NL">Bladeren</translation>
+                    <translation lang="ar_AE">تصفح</translation>
                 </translations>
             </property>
             <property key="dropzoneAcceptedMessage" type="textTemplate">
@@ -105,6 +115,7 @@
                 <translations>
                     <translation lang="en_US">All files can be uploaded.</translation>
                     <translation lang="nl_NL">Alle bestanden kunnen worden geüpload.</translation>
+                    <translation lang="ar_AE">يمكن رفع جميع الملفات.</translation>
                 </translations>
             </property>
             <property key="dropzoneRejectedMessage" type="textTemplate">
@@ -113,6 +124,7 @@
                 <translations>
                     <translation lang="en_US">Some files may not be uploadable.</translation>
                     <translation lang="nl_NL">Sommige bestanden kunnen mogelijk niet worden geüpload.</translation>
+                    <translation lang="ar_AE">قد لا يمكن رفع بعض الملفات.</translation>
                 </translations>
             </property>
             <property key="uploadInProgressMessage" type="textTemplate">
@@ -121,6 +133,7 @@
                 <translations>
                     <translation lang="en_US">Uploading...</translation>
                     <translation lang="nl_NL">Uploaden...</translation>
+                    <translation lang="ar_AE">جارٍ الرفع...</translation>
                 </translations>
             </property>
             <property key="uploadSuccessMessage" type="textTemplate">
@@ -129,6 +142,7 @@
                 <translations>
                     <translation lang="en_US">Uploaded successfully.</translation>
                     <translation lang="nl_NL">Succesvol geüpload.</translation>
+                    <translation lang="ar_AE">تم الرفع بنجاح.</translation>
                 </translations>
             </property>
             <property key="uploadFailureGenericMessage" type="textTemplate">
@@ -137,6 +151,7 @@
                 <translations>
                     <translation lang="en_US">An error occurred during uploading.</translation>
                     <translation lang="nl_NL">Er is een fout opgetreden tijdens het uploaden.</translation>
+                    <translation lang="ar_AE">حدث خطأ أثناء الرفع.</translation>
                 </translations>
             </property>
             <property key="uploadFailureInvalidFileFormatMessage" type="textTemplate">
@@ -145,6 +160,7 @@
                 <translations>
                     <translation lang="en_US">File format is not supported, supported formats are ###.</translation>
                     <translation lang="nl_NL">Bestandsformaat wordt niet ondersteund, ondersteunde formaten zijn ###.</translation>
+                    <translation lang="ar_AE">صيغة الملف غير مدعومة، الصيغ المدعومة هي ###.</translation>
                 </translations>
             </property>
             <property key="uploadFailureFileIsTooBigMessage" type="textTemplate">
@@ -153,6 +169,7 @@
                 <translations>
                     <translation lang="en_US">File size exceeds the maximum limit of ### megabytes.</translation>
                     <translation lang="nl_NL">Bestandsgrootte overschrijdt de maximale limiet van ### megabytes.</translation>
+                    <translation lang="ar_AE">حجم الملف يتجاوز الحد الأقصى وهو ### ميغابايت.</translation>
                 </translations>
             </property>
             <property key="uploadFailureTooManyFilesMessage" type="textTemplate">
@@ -161,6 +178,7 @@
                 <translations>
                     <translation lang="en_US">Too many files added. Only ### files per upload are allowed.</translation>
                     <translation lang="nl_NL">Te veel bestanden toegevoegd. Slechts ### bestanden per upload zijn toegestaan.</translation>
+                    <translation lang="ar_AE">تم إضافة ملفات كثيرة جداً. يُسمح بـ ### ملفات فقط لكل عملية رفع.</translation>
                 </translations>
             </property>
             <property key="unavailableCreateActionMessage" type="textTemplate">
@@ -169,6 +187,7 @@
                 <translations>
                     <translation lang="en_US">Can&apos;t upload files at this time. Please contact your system administrator.</translation>
                     <translation lang="nl_NL">Kan op dit moment geen bestanden uploaden. Neem contact op met uw systeembeheerder.</translation>
+                    <translation lang="ar_AE">لا يمكن رفع الملفات حالياً. يرجى التواصل مع مسؤول النظام.</translation>
                 </translations>
             </property>
             <property key="downloadButtonTextMessage" type="textTemplate">
@@ -177,6 +196,7 @@
                 <translations>
                     <translation lang="en_US">Download this file</translation>
                     <translation lang="nl_NL">Download dit bestand</translation>
+                    <translation lang="ar_AE">تحميل هذا الملف</translation>
                 </translations>
             </property>
             <property key="removeButtonTextMessage" type="textTemplate">
@@ -185,6 +205,7 @@
                 <translations>
                     <translation lang="en_US">Remove this file</translation>
                     <translation lang="nl_NL">Verwijder dit bestand</translation>
+                    <translation lang="ar_AE">إزالة هذا الملف</translation>
                 </translations>
             </property>
             <property key="removeSuccessMessage" type="textTemplate">
@@ -193,6 +214,7 @@
                 <translations>
                     <translation lang="en_US">Removed successfully.</translation>
                     <translation lang="nl_NL">Succesvol verwijderd.</translation>
+                    <translation lang="ar_AE">تمت الإزالة بنجاح.</translation>
                 </translations>
             </property>
             <property key="removeErrorMessage" type="textTemplate">
@@ -201,6 +223,7 @@
                 <translations>
                     <translation lang="en_US">An error occurred while removing this file.</translation>
                     <translation lang="nl_NL">Er is een fout opgetreden bij het verwijderen van dit bestand.</translation>
+                    <translation lang="ar_AE">حدث خطأ أثناء إزالة هذا الملف.</translation>
                 </translations>
             </property>
         </propertyGroup>
