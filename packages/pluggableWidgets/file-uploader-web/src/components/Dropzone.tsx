@@ -5,7 +5,6 @@ import { FileRejection, useDropzone } from "react-dropzone";
 import { MimeCheckFormat } from "../utils/parseAllowedFormats";
 import { TranslationsStore } from "../stores/TranslationsStore";
 import { useTranslationsStore } from "../utils/useTranslationsStore";
-import { fileSize } from "../utils/fileSize";
 
 interface DropzoneProps {
     warningMessage?: string;
@@ -41,7 +40,8 @@ export const Dropzone = observer(
             .map(ext => ext.replace(".", "").toUpperCase())
             .join(", ");
 
-        const maxSizeLabel = maxSize > 0 ? `( Max. File Size : ${fileSize(maxSize)} )` : null;
+        const maxSizeMiB = Math.floor(maxSize / (1024 * 1024));
+        const maxSizeLabel = maxSizeMiB > 0 ? translations.get("maxFileSizeLabelMessage", maxSizeMiB.toString()) : null;
         const subtitle = [fileExtensions, maxSizeLabel].filter(Boolean).join(" ");
 
         return (

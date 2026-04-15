@@ -226,6 +226,15 @@
                     <translation lang="ar_AE">حدث خطأ أثناء إزالة هذا الملف.</translation>
                 </translations>
             </property>
+            <property key="maxFileSizeLabelMessage" type="textTemplate">
+                <caption>Max file size label</caption>
+                <description>Label shown in the dropzone subtitle. Use ### as placeholder for the max file size in megabytes.</description>
+                <translations>
+                    <translation lang="en_US">Max. File Size: ### MB</translation>
+                    <translation lang="nl_NL">Max. bestandsgrootte: ### MB</translation>
+                    <translation lang="ar_AE">الحد الأقصى لحجم الملف: ### ميجابايت</translation>
+                </translations>
+            </property>
         </propertyGroup>
         <propertyGroup caption="Advanced">
             <property key="objectCreationTimeout" type="integer" defaultValue="10">

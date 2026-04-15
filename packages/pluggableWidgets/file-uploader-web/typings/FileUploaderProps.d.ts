@@ -76,6 +76,7 @@ export interface FileUploaderContainerProps {
     removeButtonTextMessage: DynamicValue<string>;
     removeSuccessMessage: DynamicValue<string>;
     removeErrorMessage: DynamicValue<string>;
+    maxFileSizeLabelMessage: DynamicValue<string>;
     objectCreationTimeout: number;
     onUploadSuccessFile?: ListActionValue;
     onUploadSuccessImage?: ListActionValue;
@@ -120,6 +121,7 @@ export interface FileUploaderPreviewProps {
     removeButtonTextMessage: string;
     removeSuccessMessage: string;
     removeErrorMessage: string;
+    maxFileSizeLabelMessage: string;
     objectCreationTimeout: number | null;
     onUploadSuccessFile: {} | null;
     onUploadSuccessImage: {} | null;
